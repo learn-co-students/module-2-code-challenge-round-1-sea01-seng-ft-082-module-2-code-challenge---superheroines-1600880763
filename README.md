@@ -96,7 +96,7 @@ Show a form to associate a Heroine with a Power. It should have:
 
 After successfully creating a HeroinePower, the user should be redirected to the selected Heroine's show page.
 
-### 6. HeroinePower Validations
+### 6. HeroinePower Strength Validation
 
 Add validations to the HeroinePower model:
 
