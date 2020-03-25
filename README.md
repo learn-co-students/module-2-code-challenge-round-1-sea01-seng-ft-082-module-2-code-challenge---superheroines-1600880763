@@ -63,7 +63,7 @@ A HeroinePower should have a:
 
 - heroine
 - power
-- strength, as a string value
+- strength, as a string value (e.g. "Strong" or "Weak")
 
 Each Heroine can have multiple powers. Powers can belong to multiple Heroines. Each HeroinePower has its own strength value.
 
