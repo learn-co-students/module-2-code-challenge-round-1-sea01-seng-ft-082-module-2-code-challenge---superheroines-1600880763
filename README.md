@@ -55,16 +55,17 @@ Update the code of the application to meet the following deliverables. Follow RE
 
 ***Read through these deliverables carefully to understand the requirements for this code challenge. Tackle them one by one, as they build on each other sequentially.***
 
-### 1. Heroine-Power association
+### 1. HeroinePower association
 
 Create the association between the models. Update the schema and models to create the HeroinePower association.
 
 A HeroinePower should have a:
 
-- a heroine
-- a power
+- heroine
+- power
+- strength, as a string value (e.g. "Strong" or "Weak")
 
-Each Heroine can have multiple powers. Powers can belong to multiple Heroines.
+Each Heroine can have multiple powers. Powers can belong to multiple Heroines. Each HeroinePower has its own strength value.
 
 ### 2. Heroine index page links
 
@@ -84,29 +85,28 @@ Power show page should include the:
 - name
 - description
 
-### 5. Heroine Create page
+### 5. HeroinePower Create page
 
-Show a form to create a new Heroine. It should have:
+Show a form to associate a Heroine with a Power. It should have:
 
-- an input for name
-- an input for super name
-- a select dropdown to choose a power
-- a submit button to create the Heroine
+- a select dropdown to choose a Heroine
+- a select dropdown to choose a Power
+- a text input to assign a string value to the HeroinePower's strength
+- a submit button to create the HeroinePower
 
-After successfully creating a Heroine, the user should be redirected to the new Heroine's show page.
+After successfully creating a HeroinePower, the user should be redirected to the selected Heroine's show page.
 
-### 6. Heroine Validations
+### 6. HeroinePower Strength Validation
 
-Add validations to the Heroine model:
+Add validations to the HeroinePower model:
 
-- must have a name
-- must have a super name
+- strength must be one of the following values: 'Strong', 'Weak', 'Average'
 
-Add error handling to the create action. If a user tries to create an invalid Heroine, the user should see the validation errors.
+Add error handling to the create action. If a user tries to create an invalid HeroinePower, the user should see the validation errors.
 
-### 7. Advanced: Heroine Super Name Validation
+### 7. Advanced: HeroinePower Power Validation
 
-No two heroines should have the same super name.
+No Heroine should be associated with the same Power twice. (It doesn't make sense for Ms Marvel to be associated with Seventh Sense twice!)
 
 - Add a validation to prevent this.
 - Update the error handling in the create action to display this error
@@ -117,20 +117,9 @@ Update the Heroine show page to display the Powers that the heroine has.
 
 Each power should link to the corresponding Power show page.
 
-### 9. Advanced: Power Update Form to Link Multiple Heroines
+### 9. Advanced: Display the Strength of Each Heroine's Powers
 
-Show a form to update a Power. It should have:
-
-- a text input for the name with the current name already displayed
-- a text area input for the description with the current description already displayed
-- a list of Heroines, with a checkbox for each one
-- a submit button
-
-The update action should create associations for each of the Heroines the user selected.
-
-When the form successfully saves, the user should be redirected to the Power show page.
-
-The power show page should show a link to the edit page.
+Update the Heroine's show page to display the strength of the Power next to the Power.
 
 ### 10. Advanced: Powers Index Page Display Heroine Count
 
