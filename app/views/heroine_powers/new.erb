@@ -1,0 +1,17 @@
+<h1> Create a Heroine's Power </h1>
+
+<%= form_for @heroine_power do |f| %>
+    <%= f.label :Heroine %>
+    <%= f.collection_select :heroine_id, Heroine.all, :id, :super_name %>
+    <%= f.label :Power %>
+    <%= f.collection_select :power_id, Power.all, :id, :name %>
+    <p><%= f.label :Strength%>: Strong, Average or Weak </p>
+    <%= f.text_field :strength %>
+    <%= f.submit %>
+    <% end %>
+
+<% if flash[:errors]%>
+    <% flash[:errors].each do |e|%>
+        <p> <%= e %> <p>
+    <% end %>
+    <% end %>
