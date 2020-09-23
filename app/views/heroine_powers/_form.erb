@@ -1,0 +1,7 @@
+<%= form_for @heroine_power do |t| %>
+<%= f.label :heroine%>
+<%= f.collection_select :heroine_id, @heroines, :id, :super_name%>
+<%= f.collection_select :power_id, @powers, :id, :name%>
+<%= f.label :powers_strength%>
+<%= f.submit%>
+<%end%>
