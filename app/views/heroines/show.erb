@@ -3,10 +3,7 @@
 <h1> <%= @heroine.name %> </h1>
 
 <h2> Powers: </h2>
-<% @heroine.powers.each do |power| %>
-    <% @heroine.heroine_powers.each do |hpower| %>
-   <p> <%= link_to power.name, power%> strength: <%= hpower.strength%><p>
-
+<% @heroine.heroine_powers.each do |hpower| %>
+   <p> <%= link_to hpower.power.name, hpower.power%> strength: <%= hpower.strength%><p>
     </br>
     <% end%>
-    <% end %>
