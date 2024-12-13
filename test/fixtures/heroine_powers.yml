@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  heroine: MyString
+  power: MyString
+  strength: MyString
+
+two:
+  heroine: MyString
+  power: MyString
+  strength: MyString
